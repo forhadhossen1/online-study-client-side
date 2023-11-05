@@ -59,9 +59,9 @@ const Login = () => {
 
 
     return (
-        <div className="flex justify-center items-center h-[85vh] bg-gray-300 px-2">
+        <div className="flex justify-center items-center h-[85vh] px-2">
             <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
-                <h4 className="block text-2xl mt-12 font-bold text-center tracking-normal text-blue-gray-900 antialiased">
+                <h4 className="block text-3xl font-bold text-center tracking-normal antialiased relative text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                     Login
                 </h4>
                 <p className="mt-1 block text-center text-base font-normal leading-relaxed text-gray-700 antialiased">
@@ -92,12 +92,15 @@ const Login = () => {
 
                     <div>
                         <input
-                            className="mt-6 block w-full select-none rounded-lg bg-orange-700 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                            className="mt-6 block w-full select-none rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                             data-ripple-light="true"
                             type="submit"
                             value="Login"
                         />
                     </div>
+
+                    <div className="divider lg:divider-horizontal">OR</div> 
+
                     <button onClick={handleGoogleLogin} className="mt-6 flex justify-center gap-3 items-center w-full select-none rounded-lg bg-orange-100 py-3 px-6 text-center align-middle font-sans text-xs font-bold  shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none text-blue-600"
                         data-ripple-light="true"><FaGoogle className="text-xl text-black"></FaGoogle> Login with Google</button>
 
