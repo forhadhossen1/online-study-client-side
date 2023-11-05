@@ -172,7 +172,7 @@ const SignUp = () => {
                         data-ripple-light="true" type="submit" value="Register" />
 
                     
-                    <div className="divider lg:divider-horizontal">OR</div> 
+                    <div className="divider ">OR</div> 
 
                     <button onClick={handleGoogleSignUp} className="mt-4 flex justify-center gap-3 items-center w-full select-none rounded-lg bg-orange-100 py-3 px-6 text-center align-middle font-sans text-xs font-bold  shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none text-blue-600"
                         data-ripple-light="true"><FaGoogle className="text-xl text-black"></FaGoogle> Sign Up with Google</button>
