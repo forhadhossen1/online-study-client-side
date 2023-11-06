@@ -24,6 +24,7 @@ const Header = () => {
         <li><NavLink to='/assignment'>Assignment</NavLink></li>
         <li><NavLink to='/createAssignment'>Create Assignment</NavLink></li>
         <li><NavLink to='/myAssignment'>My Assignment</NavLink></li>
+        <li><NavLink to='/submitedAssignment'>Submited Assignment</NavLink></li>
     </>
 
     return (
