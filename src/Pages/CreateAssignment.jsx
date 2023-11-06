@@ -1,21 +1,26 @@
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const CreateAssignment = () => {
+    const {user} = useContext(AuthContext);
 
     const handleCreateAssignment = event => {
         event.preventDefault();
 
         const form = event.target;
-        const name = form.name.value;
-        const brand = form.brand_name.value;
-        const price = form.price.value;
-        const rating = form.rating.value;
-        const details = form.details.value;
+        const title = form.title.value;
+        const category = form.category_name.value;
+        const date = form.date.value;
+        const email = user?.email;
+        const mark = form.mark.value;
+        const thumbnail = form.thumbnail.value;
+        const description = form.description.value;
         const photo = form.photo.value;
 
-        const newProduct = { name, brand, price, rating, details, photo }
+        const newAssignment = { title, category, date, mark, thumbnail, description, photo,email }
 
-        console.log(newProduct);
+        console.log(newAssignment);
 
     }
 
@@ -27,10 +32,10 @@ const CreateAssignment = () => {
                 <div className="md:flex gap-5">
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text">Name</span>
+                            <span className="label-text">Title</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="name" placeholder="Enter Product name" className="input input-bordered w-full" />
+                            <input type="text" name="title" placeholder="Enter title" className="input input-bordered w-full" />
                         </label>
                     </div>
 
@@ -40,7 +45,7 @@ const CreateAssignment = () => {
                         </label>
                         <label className="input-group">
                             {/* <input type="text" name="brand_name" placeholder="Enter product brand" className="input input-bordered w-full" /> */}
-                            <select name="brand_name" className="input input-bordered w-full" >
+                            <select name="category_name" className="input input-bordered w-full" >
                                 <option disabled selected>Select Category</option>
                                 <option>Easy</option>
                                 <option>Medium</option>
@@ -54,19 +59,42 @@ const CreateAssignment = () => {
                 <div className="md:flex  gap-5">
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text">Price</span>
+                            <span className="label-text">Date</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="price" placeholder="Enter Product price" className="input input-bordered w-full" />
+                            <input type="date" name="date" placeholder="Enter Product price" className="input input-bordered w-full" />
                         </label>
                     </div>
 
                     <div className="form-control md:w-1/2">
                         <label className="label">
-                            <span className="label-text">Rating</span>
+                            <span className="label-text">Mark</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="rating" placeholder="Enter Product Rating" className="input input-bordered w-full" />
+                            <input type="text" name="mark" placeholder="Assignment Mark" className="input input-bordered w-full" />
+                        </label>
+                    </div>
+
+
+                </div>
+
+                {/* email  */}
+                <div className="md:flex  gap-5">
+                    <div className="form-control md:w-1/2">
+                        <label className="label">
+                            <span className="label-text">Email</span>
+                        </label>
+                        <label className="input-group">
+                            <input type="text" defaultValue={user?.email} name="email" className="input input-bordered w-full" />
+                        </label>
+                    </div>
+
+                    <div className="form-control md:w-1/2">
+                        <label className="label">
+                            <span className="label-text">Thumbnail</span>
+                        </label>
+                        <label className="input-group">
+                            <input type="text" name="thumbnail" placeholder="Thumbnail" className="input input-bordered w-full" />
                         </label>
                     </div>
 
@@ -77,10 +105,10 @@ const CreateAssignment = () => {
 
                 <div className="form-control w-full">
                     <label className="label">
-                        <span className="label-text">Details</span>
+                        <span className="label-text">Description</span>
                     </label>
                     <label className="input-group">
-                        <input type="text" name="details" placeholder="Enter Product details" className="input input-bordered w-full" />
+                        <input type="text" name="description" placeholder="Type description" className="input input-bordered w-full" />
                     </label>
                 </div>
 
