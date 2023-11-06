@@ -1,6 +1,7 @@
 import Banner from "../Components/Banner";
 import Faq from "../Components/FAQ";
 import Feature from "../Components/Feature";
+import Footer from "./Footer";
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
             <Banner></Banner>
             <Feature></Feature>
             <Faq></Faq>
+            <Footer></Footer>
         </div>
     );
 };
