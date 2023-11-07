@@ -7,6 +7,7 @@ import CreateAssignment from "../Pages/CreateAssignment";
 import Assignment from "../Pages/Assignment";
 import MyAssignment from "../Pages/MyAssignment";
 import SubmitedAss from "../Pages/SubmitedAss";
+import PrivetRouts from "./PrivetRouts";
 
 const router = createBrowserRouter([
   {
@@ -18,28 +19,32 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path : '/signUp',
-        element : <SignUp></SignUp>
+        path: '/signUp',
+        element: <SignUp></SignUp>
       },
       {
-        path : '/login',
-        element : <Login></Login>
+        path: '/login',
+        element: <Login></Login>
       },
       {
-        path : '/createAssignment',
-        element : <CreateAssignment></CreateAssignment>
+        path: '/createAssignment',
+        element: <CreateAssignment></CreateAssignment>
       },
       {
-        path : '/assignment',
+        path: '/assignment',
         element: <Assignment></Assignment>
       },
       {
-        path : '/myAssignment',
-        element : <MyAssignment></MyAssignment>
+        path: '/myAssignment',
+        element: <PrivetRouts>
+          <MyAssignment></MyAssignment>
+        </PrivetRouts>
       },
       {
-        path : '/submitedAssignment',
-        element : <SubmitedAss></SubmitedAss>
+        path: '/submitedAssignment',
+        element: <PrivetRouts>
+          <SubmitedAss></SubmitedAss>
+        </PrivetRouts>
       }
     ]
   },
