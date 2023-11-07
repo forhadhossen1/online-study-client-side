@@ -9,10 +9,10 @@ const MyAssRow = ({ assignment }) => {
         <tr>
             <td>{user.displayName}</td>
             <td>{title}</td>
-            <td>pending</td>
+            <td>pendign</td>
             <td>{mark}</td>
-            <td>12/16/2020</td>
-            <td>aksobis</td>
+            <td>Pending</td>
+            <td>Pending</td>
         </tr>
 
     );
