@@ -30,7 +30,7 @@ const MyAssignment = () => {
                             <th>Feedback</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="bg-gray-200">
                         {
                             assignments.map(assignment => <MyAssRow
                                 key={assignment._id}

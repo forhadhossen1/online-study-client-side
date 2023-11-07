@@ -52,7 +52,7 @@ const SubmitedAss = () => {
 
     return (
         <div>
-            <h2 className="text-4xl font-bold text-center">My Submited Assignment : {assignments.length}</h2>
+            <h2 className="text-4xl font-bold text-center py-8">Submited Assignment : {assignments.length}</h2>
 
             <div className="overflow-x-auto">
                 <table className="table">
@@ -68,14 +68,14 @@ const SubmitedAss = () => {
                             <th>Give Mark</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        {
-                            assignments.map(assignment => <SubAssRow
-                                key={assignment._id}
-                                assignment={assignment}
-                                handleDelete={handleDelete}
-                            ></SubAssRow>)
-                        }
+                    <tbody className="bg-gray-200">
+                            {
+                                assignments.map(assignment => <SubAssRow
+                                    key={assignment._id}
+                                    assignment={assignment}
+                                    handleDelete={handleDelete}
+                                ></SubAssRow>)
+                            }
                     </tbody>
 
                 </table>

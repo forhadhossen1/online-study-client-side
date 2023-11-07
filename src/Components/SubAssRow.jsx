@@ -17,7 +17,7 @@ const SubAssRow = ({ assignment , handleDelete}) => {
             </td>
             <td>Pending</td>
             <th>
-                <button className="btn btn-ghost btn-xs">Give Mark</button>
+                <button className="btn btn-ghost btn-xs bg-slate-500">Give Mark</button>
             </th>
         </tr>
     );
