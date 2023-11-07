@@ -6,7 +6,7 @@ const Feature = () => {
 
     const [features, setFeature] = useState([]);
     useEffect(() => {
-        fetch('feature.json')
+        fetch('http://localhost:5000/features')
             .then(res => res.json())
             .then(data => setFeature(data))
     }, [])
@@ -18,7 +18,7 @@ const Feature = () => {
             </div>
             <div className="grid gap-6 py-6 grid-cols-1 md:grid-cols-2">
                 {
-                    features.map(feature => <FeatureCard key={feature.index} feature={feature} ></FeatureCard>)
+                    features.map(feature => <FeatureCard key={feature._id} feature={feature} ></FeatureCard>)
                 }
             </div>
         </div>

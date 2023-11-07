@@ -3,7 +3,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const CreateAssignment = () => {
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     const handleCreateAssignment = event => {
         event.preventDefault();
@@ -18,9 +18,32 @@ const CreateAssignment = () => {
         const description = form.description.value;
         const photo = form.photo.value;
 
-        const newAssignment = { title, category, date, mark, thumbnail, description, photo,email }
+        const createAssignment = {
+            title,
+            category,
+            date,
+            mark,
+            thumbnail,
+            description,
+            photo,
+            email
+        }
+        console.log(createAssignment);
 
-        console.log(newAssignment);
+        fetch('http://localhost:5000/assignments', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body : JSON.stringify(createAssignment)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                alert('assignment create successfully')
+            }
+            })
 
     }
 
@@ -44,7 +67,6 @@ const CreateAssignment = () => {
                             <span className="label-text">Category</span>
                         </label>
                         <label className="input-group">
-                            {/* <input type="text" name="brand_name" placeholder="Enter product brand" className="input input-bordered w-full" /> */}
                             <select name="category_name" className="input input-bordered w-full" >
                                 <option disabled selected>Select Category</option>
                                 <option>Easy</option>
@@ -85,7 +107,7 @@ const CreateAssignment = () => {
                             <span className="label-text">Email</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" defaultValue={user?.email} name="email" className="input input-bordered w-full" />
+                            <input type="text" name="email" defaultValue={user?.email} className="input input-bordered w-full" />
                         </label>
                     </div>
 
