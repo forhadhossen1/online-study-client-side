@@ -7,7 +7,7 @@ const MyAssRow = ({ assignment }) => {
     return (
 
         <tr>
-            <td>{user.displayName}</td>
+            <td  className="py-5">{user.displayName}</td>
             <td>{title}</td>
             <td>pendign</td>
             <td>{mark}</td>

@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 
 const CreateAssignment = () => {
@@ -41,7 +42,11 @@ const CreateAssignment = () => {
             .then(data => {
                 console.log(data)
                 if (data.insertedId) {
-                alert('assignment create successfully')
+                    Swal.fire(
+                        'Success',
+                        'Assignment Create Successfull',
+                        'success'
+                    )
             }
             })
 

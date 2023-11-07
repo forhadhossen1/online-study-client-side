@@ -31,12 +31,12 @@ const MyAssignment = () => {
                         </tr>
                     </thead>
                     <tbody>
-        {
-            assignments.map(assignment=> <MyAssRow
-            key={assignment._id}
-            assignment={assignment}
-            ></MyAssRow>)
-        }
+                        {
+                            assignments.map(assignment => <MyAssRow
+                                key={assignment._id}
+                                assignment={assignment}
+                            ></MyAssRow>)
+                        }
                     </tbody>
                 </table>
             </div>
