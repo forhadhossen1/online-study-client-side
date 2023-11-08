@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AssignmentCard from "../Components/AssignmentCard";
+import Footer from "./Footer";
 
 
 const Assignment = () => {
@@ -23,6 +24,9 @@ const Assignment = () => {
                         totalAssignment={totalAssignment}
                         key={totalAssignment._id}></AssignmentCard>)
                 }
+            </div>
+            <div className="pt-6">
+            <Footer></Footer>
             </div>
         </div>
     );

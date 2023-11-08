@@ -9,11 +9,13 @@ import MyAssignment from "../Pages/MyAssignment";
 import SubmitedAss from "../Pages/SubmitedAss";
 import PrivetRouts from "./PrivetRouts";
 import Update from "../Pages/Update";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <LayOuts></LayOuts>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: '/',
@@ -29,7 +31,9 @@ const router = createBrowserRouter([
       },
       {
         path: '/createAssignment',
-        element: <CreateAssignment></CreateAssignment>
+        element: <PrivetRouts>
+          <CreateAssignment></CreateAssignment>
+        </PrivetRouts>
       },
       {
         path: '/assignment',
@@ -48,8 +52,10 @@ const router = createBrowserRouter([
         </PrivetRouts>
       },
       {
-        path : '/update/:id',
-        element : <Update></Update>,
+        path: '/update/:id',
+        element: <PrivetRouts>
+          <Update></Update>
+        </PrivetRouts>,
         loader: ({ params }) => fetch(`http://localhost:5000/assignment/${params.id}`)
       }
     ]
