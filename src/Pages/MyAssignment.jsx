@@ -10,7 +10,7 @@ const MyAssignment = () => {
     const url = `http://localhost:5000/assignments?email=${user?.email}`;
 
     useEffect(() => {
-        fetch(url)
+        fetch(url, {credentials: 'include'})
             .then(res => res.json())
             .then(data => setAssignments(data))
     }, [url])

@@ -8,7 +8,7 @@ const SubmitedAss = () => {
     const { user } = useContext(AuthContext);
     const [assignments, setAssignments] = useState([])
 
-    const url = `http://localhost:5000/assignments?email=${user?.email}`;
+    const url = `http://localhost:5000/assignment?email=${user?.email}`;
 
     useEffect(() => {
         fetch(url)
@@ -29,7 +29,7 @@ const SubmitedAss = () => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/assignments/${id}`, {
+                fetch(`http://localhost:5000/assignment/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
