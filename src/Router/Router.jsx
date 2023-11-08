@@ -56,7 +56,7 @@ const router = createBrowserRouter([
         element: <PrivetRouts>
           <Update></Update>
         </PrivetRouts>,
-        loader: ({ params }) => fetch(`http://localhost:5000/assignment/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment11-onlinestudy-server.vercel.app/assignment/${params.id}`)
       }
     ]
   },

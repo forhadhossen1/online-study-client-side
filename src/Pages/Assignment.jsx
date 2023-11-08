@@ -7,7 +7,7 @@ const Assignment = () => {
 
     const [totalAssignmetns, setTotalAssignments] = useState([]);
 
-    const url = `http://localhost:5000/assignment`;
+    const url = `https://assignment11-onlinestudy-server.vercel.app/assignment`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
