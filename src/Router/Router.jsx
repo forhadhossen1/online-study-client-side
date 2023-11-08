@@ -8,6 +8,7 @@ import Assignment from "../Pages/Assignment";
 import MyAssignment from "../Pages/MyAssignment";
 import SubmitedAss from "../Pages/SubmitedAss";
 import PrivetRouts from "./PrivetRouts";
+import Update from "../Pages/Update";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,11 @@ const router = createBrowserRouter([
         element: <PrivetRouts>
           <SubmitedAss></SubmitedAss>
         </PrivetRouts>
+      },
+      {
+        path : '/update/:id',
+        element : <Update></Update>,
+        loader: ({ params }) => fetch(`http://localhost:5000/assignment/${params.id}`)
       }
     ]
   },

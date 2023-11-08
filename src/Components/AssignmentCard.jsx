@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 
 const AssignmentCard = ({ totalAssignment }) => {
-    const { title, category, mark, thumbnail, description, photo } = totalAssignment || {}
+    const { title, category, mark, description, photo, _id } = totalAssignment || {}
     console.log(totalAssignment)
     return (
         <div className="card bg-base-100 shadow-xl">
@@ -15,7 +16,7 @@ const AssignmentCard = ({ totalAssignment }) => {
                 <p>{description}</p>
                 <div className="card-actions">
                     <button className="btn btn-primary">View</button>
-                    <button className="btn btn-primary">Update</button>
+                    <Link to={`/update/${_id}`}><button className="btn btn-primary">Update</button></Link>
                 </div>
             </div>
         </div>
