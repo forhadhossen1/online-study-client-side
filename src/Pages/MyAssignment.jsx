@@ -7,7 +7,7 @@ const MyAssignment = () => {
     const { user } = useContext(AuthContext);
     const [assignments, setAssignments] = useState([])
 
-    const url = `https://assignment11-onlinestudy-server.vercel.app/assignments?email=${user?.email}`;
+    const url = `http://localhost:5000/assignments?email=${user?.email}`;
 
     useEffect(() => {
         fetch(url, {credentials: 'include'})

@@ -38,7 +38,7 @@ const Header = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <p className="btn btn-ghost normal-case font-bold text-2xl">Study</p>
+                <p className="btn btn-ghost normal-case font-bold text-2xl text-blue-700">Study</p>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
