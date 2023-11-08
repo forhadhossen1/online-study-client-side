@@ -15,8 +15,9 @@ const AssignmentCard = ({ totalAssignment }) => {
                 <p className="font-bold">Mark : {mark}</p>
                 <p>{description}</p>
                 <div className="card-actions">
-                    <button className="btn btn-primary">View</button>
-                    <Link to={`/update/${_id}`}><button className="btn btn-primary">Update</button></Link>
+                    <Link to={`/details/${_id}`}><button className="btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">View</button></Link>
+
+                    <Link to={`/update/${_id}`}><button className="btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Update</button></Link>
                 </div>
             </div>
         </div>
