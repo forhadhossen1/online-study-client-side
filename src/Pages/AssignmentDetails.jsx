@@ -13,7 +13,7 @@ const AssignmentDetails = () => {
         const submit = {link, note, status};
         console.log(submit)
 
-        fetch('http://localhost:5000/submits', {
+        fetch('https://assignment11-onlinestudy-server.vercel.app/submits', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

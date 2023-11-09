@@ -6,7 +6,7 @@ const Feature = () => {
 
     const [features, setFeature] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/features')
+        fetch('https://assignment11-onlinestudy-server.vercel.app/features')
             .then(res => res.json())
             .then(data => setFeature(data))
     }, [])
