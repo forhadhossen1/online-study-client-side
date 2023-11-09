@@ -9,10 +9,11 @@ const AssignmentDetails = () => {
         const form = event.target;
         const link = form.link.value;
         const note = form.note.value;
-        const submit = {link, note};
+        const status = 'pending';
+        const submit = {link, note, status};
         console.log(submit)
 
-        fetch('http://localhost:5000/assignments', {
+        fetch('http://localhost:5000/submits', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

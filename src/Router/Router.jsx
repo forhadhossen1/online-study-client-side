@@ -11,6 +11,7 @@ import PrivetRouts from "./PrivetRouts";
 import Update from "../Pages/Update";
 import ErrorPage from "../Pages/ErrorPage";
 import AssignmentDetails from "../Pages/AssignmentDetails";
+import Givemark from "../Pages/Givemark";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,11 @@ const router = createBrowserRouter([
          <AssignmentDetails></AssignmentDetails>
         </PrivetRouts>,
         loader: ({ params }) => fetch(`http://localhost:5000/assignment/${params.id}`)
+      },
+      {
+        path : '/giveMark/:id',
+        element : <Givemark></Givemark>,
+        loader: ({ params }) => fetch(`http://localhost:5000/assignments/${params.id}`)
       }
     ]
   },

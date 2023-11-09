@@ -52,7 +52,7 @@ const SubmitedAss = () => {
 
     return (
         <div>
-            <h2 className="text-4xl font-bold text-center py-8">Submited Assignment : {assignments.length}</h2>
+            <h2 className="text-4xl font-bold text-center py-8">Submited Assignment</h2>
 
             <div className="overflow-x-auto">
                 <table className="table">

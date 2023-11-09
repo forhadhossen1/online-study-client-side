@@ -26,7 +26,7 @@ const Assignment = () => {
                 }
             </div>
             <div className="pt-6">
-            <Footer></Footer>
+                <Footer></Footer>
             </div>
         </div>
     );

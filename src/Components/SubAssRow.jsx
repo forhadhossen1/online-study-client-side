@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const SubAssRow = ({ assignment , handleDelete}) => {
 
@@ -17,7 +18,7 @@ const SubAssRow = ({ assignment , handleDelete}) => {
             </td>
             <td>Pending</td>
             <th>
-                <button className="btn btn-ghost btn-xs bg-slate-500">Give Mark</button>
+            <Link to={`/giveMark/${_id}`}><button className="btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Give Mark</button></Link>
             </th>
         </tr>
     );
