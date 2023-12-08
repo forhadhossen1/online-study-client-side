@@ -1,5 +1,5 @@
 ## live web link :
- https://online-study-83f14.firebaseapp.com/
+https://vercel.com/forhadhossen1/assignment11-onlinestudy-clients
 
 # 5 Features of My Project:
 ## Real-time Collaboration:
